@@ -2,8 +2,8 @@
 #ifndef GRAPH_H
 #define GRAPH_H
 
-#define MaxVertexNum 100                        //顶点数目的最大值
-typedef int vertexType;                        //顶点的数据类型
+#define MaxVertexNum 20							//顶点数目的最大值
+typedef int vertexType;							//顶点的数据类型
 typedef int edgeType;                           //带权图中边上权值的数据类型
 typedef struct {
 	vertexType Vex[MaxVertexNum];				//顶点表
@@ -13,6 +13,6 @@ typedef struct {
 //创建图
 MGraph create_graph(int vexnum, int arcnum);
 //BFS遍历图
-MGraph BFStraverse(int vexnum, int arcnum);
+void BFStraverse(MGraph g);
 
 #endif 
