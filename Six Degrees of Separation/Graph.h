@@ -8,11 +8,11 @@ typedef int edgeType;                           //带权图中边上权值的数据类型
 typedef struct {
 	vertexType Vex[MaxVertexNum];				//顶点表
 	edgeType Edge[MaxVertexNum][MaxVertexNum];	//邻接矩阵，边表
-	int vexnum，arcnum;							//图的当前顶点数边数
+	int vexnum,arcnum;							//图的当前顶点数边数
 }MGraph;
 //创建图
 MGraph create_graph(int vexnum, int arcnum);
 //BFS遍历图
-void BFStraverse(MGraph g);
+int BFStraverse(MGraph *g, vertexType v);
 
 #endif 

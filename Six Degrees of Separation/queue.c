@@ -8,7 +8,12 @@ void InitQueue(SqQueue* Q)
 	Q->front = Q->rear = 0;
 }
 
-
+//入队
+void Enqueue(SqQueue* Q,int e)
+{
+	Q->base[Q->rear] = e;
+	Q->rear = (Q->rear + 1) % 100;
+}
 //出队
 int Dequeue(SqQueue* Q)
 {
