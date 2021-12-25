@@ -40,7 +40,7 @@ int BFStraverse(MGraph *g, vertexType v) {
 		int e = Dequeue(&q);
 		for (int i = 1; i <= g->vexnum; i++)
 		{
-			if (!visited[i] && g->Edge[v][i]) {
+			if (!visited[i] && g->Edge[e][i]) {
 				Enqueue(&q, i);
 				visited[i] = 1;
 				cnt++;
@@ -51,7 +51,7 @@ int BFStraverse(MGraph *g, vertexType v) {
 			level++;
 			last = tail;
 		}
-		if (level == 6)
+		if (level > 6)
 			break;
 	}
 

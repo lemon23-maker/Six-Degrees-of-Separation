@@ -8,6 +8,7 @@ typedef struct
 }SqQueue;
 //初始化循环队列
 void InitQueue(SqQueue* Q);
+//入队
 void Enqueue(SqQueue* Q, int e);
 //出队
 int Dequeue(SqQueue* Q);
